@@ -1,7 +1,7 @@
 services:
   postgres:
     image: postgres:latest
-    container_name: wireguard_bot_postgres
+    container_name: tg_db
     env_file: .env.db
     volumes:
       - postgres_data:/var/lib/postgresql/data
@@ -18,11 +18,11 @@ services:
       - wgnet
 
 
-  bot:
+  tgbot:
     build:
       context: .
       dockerfile: app/Dockerfile
-    container_name: mybot
+    container_name: tgbot
     restart: unless-stopped
     env_file:
       - .env
