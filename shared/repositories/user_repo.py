@@ -10,14 +10,16 @@ class UserRepository(BaseRepository):
     
     async def create_user(self, tg_id: int, username: str = None) -> User:
 
-        existing = await self.session.scalar(select(User).where(User.id == tg_id))
+        existing = await self.session.scalar(
+            select(User).where(User.id == tg_id)
+        )
 
         if existing:
             return existing
         
         user = User(id=tg_id, username=username)
 
-        await self.session.add(user)
+        self.session.add(user)
         await self.session.commit()
-        await self.session.refresh()
+        await self.session.refresh(user)
         return user
