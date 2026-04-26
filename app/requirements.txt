@@ -1,11 +1,6 @@
-#app
 aiogram
 pydantic
-
-# shared
 pydantic_settings
 sqlalchemy
-
-# infra
 sqlalchemy
 asyncpg

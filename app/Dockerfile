@@ -12,8 +12,6 @@ COPY domain domain
 COPY application application
 
 
-# for don't create __pycache__ folders inside docker
-
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \
     PYTHONPATH=/app

@@ -6,5 +6,4 @@ class Settings(BaseSettings):
 
     _env_file = ".env"
 
-    
 config = Settings()
