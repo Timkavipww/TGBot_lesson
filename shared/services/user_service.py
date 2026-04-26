@@ -1,4 +1,4 @@
-from typing import List, Optional
+from typing import Optional
 
 from shared.models import User
 from shared.repositories import UserRepository

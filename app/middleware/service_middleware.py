@@ -1,7 +1,8 @@
 from aiogram import BaseMiddleware
+from sqlalchemy.ext.asyncio import AsyncSession
+
 from shared.repositories import UserRepository
 from shared.services import UserService
-from sqlalchemy.ext.asyncio import AsyncSession
 
 class ServiceMiddleware(BaseMiddleware):
     async def __call__(self, handler, event, data):

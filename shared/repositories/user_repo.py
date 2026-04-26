@@ -1,7 +1,9 @@
 from typing import Optional
 from sqlalchemy import select
-from .base_repo import BaseRepository
+
 from shared.models import User
+
+from .base_repo import BaseRepository
 
 class UserRepository(BaseRepository):
     

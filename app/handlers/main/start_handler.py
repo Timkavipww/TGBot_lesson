@@ -1,6 +1,7 @@
 from aiogram import Router
 from aiogram.filters import CommandStart
 from aiogram.types import Message
+
 from shared.services import UserService
 from shared.utils import logger
 

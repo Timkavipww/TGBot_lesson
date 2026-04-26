@@ -1,4 +1,5 @@
 from infrastructure.database import Base, engine
+
 from shared.utils import logger
 from shared.models import *
 
