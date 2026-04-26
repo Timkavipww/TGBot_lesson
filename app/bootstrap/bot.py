@@ -2,7 +2,7 @@ from aiogram import Bot, Dispatcher
 from aiogram.client.default import DefaultBotProperties
 from aiogram.enums import ParseMode
 
-from shared.core import config
+from infrastructure import config
 
 bot = Bot(
     token=config.BOT_TOKEN,

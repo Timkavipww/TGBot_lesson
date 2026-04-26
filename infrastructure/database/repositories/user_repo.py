@@ -1,7 +1,7 @@
 from typing import Optional
 from sqlalchemy import select
 
-from shared.models import User
+from domain.entities import User
 
 from .base_repo import BaseRepository
 

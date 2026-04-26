@@ -1,9 +1,10 @@
 import asyncio
 
-from shared.utils import logger
+from infrastructure import logger
 
-from app.bot import bot, dp
-from app.lifespan import app_lifespan
+from app.bootstrap import app_lifespan, bot, dp
+
+
 
 async def main():
     async with app_lifespan():

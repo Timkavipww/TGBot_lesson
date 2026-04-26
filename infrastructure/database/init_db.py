@@ -1,7 +1,7 @@
 from infrastructure.database import Base, engine
 
-from shared.utils import logger
-from shared.models import *
+from infrastructure import logger
+from domain.entities import *
 
 async def init_models():
     try:

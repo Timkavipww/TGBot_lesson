@@ -7,8 +7,10 @@ COPY app/requirements.txt /tmp/requirements.txt
 RUN pip install --no-cache-dir -r /tmp/requirements.txt
 
 COPY app app
-COPY shared shared
 COPY infrastructure infrastructure
+COPY domain domain
+COPY application application
+
 
 # for don't create __pycache__ folders inside docker
 

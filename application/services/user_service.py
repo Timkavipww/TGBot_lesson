@@ -1,7 +1,7 @@
 from typing import Optional
 
-from shared.models import User
-from shared.repositories import UserRepository
+from domain.entities import User
+from infrastructure.database import UserRepository
 
 
 class UserService:

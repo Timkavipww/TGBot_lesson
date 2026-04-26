@@ -1,11 +1,11 @@
 from contextlib import asynccontextmanager
 
-from shared.utils import logger, setup_logger, init_models
-from infrastructure.database import async_session_maker
+from infrastructure import logger, setup_logger
+from infrastructure.database import async_session_maker, init_models
 
-from app.handlers import router
-from app.bot import dp
-from app.middleware import register_middlewares
+from app.bootstrap.bot import dp
+from .middlewares import register_middlewares
+from .handlers import router
 
 @asynccontextmanager
 async def app_lifespan():
