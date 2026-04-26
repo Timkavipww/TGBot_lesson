@@ -9,7 +9,9 @@ RUN pip install --no-cache-dir -r /tmp/requirements_shared.txt
 
 COPY app app
 COPY shared shared
+# for don't create __pycache__ folders inside docker
 
-# ENV PYTHONPATH=/app
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONPATH=/app
 
 CMD ["python", "-m", "app.main"]

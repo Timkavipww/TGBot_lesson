@@ -1,18 +1,8 @@
 import asyncio
-from contextlib import asynccontextmanager
-from app.bot import bot, dp
-from shared.utils import logger, setup_logger
-from app.handlers import router
+from shared.utils import logger
 
-@asynccontextmanager
-async def app_lifespan():
-    
-    setup_logger()
-    dp.include_router(router)
-    try: 
-        yield
-    except Exception as ex:
-        logger.exception(ex)
+from app.bot import bot, dp
+from app.lifespan import app_lifespan
 
 async def main():
     async with app_lifespan():
